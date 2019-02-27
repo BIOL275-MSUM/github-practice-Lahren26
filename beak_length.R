@@ -1,6 +1,7 @@
 
 # load packages -----------------------------------------------------------
-
+library(readxl)     # load readxl, for reading Excel files
+library(tidyverse)  # load tidyverse, for working with datasets
 
 # read data ---------------------------------------------------------------
 
