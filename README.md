@@ -12,4 +12,4 @@ Important files
 This github project walks through the analysis of finch data
 
 ## Link for now:
-[Rmd File] (file:///C:/Users/yv0010gn/AppData/Local/Temp/RtmpuIs9op/preview-11f84de1409d.html)
+Rmd file project file:///C:/Users/yv0010gn/AppData/Local/Temp/RtmpuIs9op/preview-11f84de1409d.html
