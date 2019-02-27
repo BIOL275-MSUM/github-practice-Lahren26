@@ -77,3 +77,66 @@ ggplot(
 ```
 
 ![](GitHub_Practice_files/figure-markdown_github/unnamed-chunk-4-1.png)
+
+T-test
+------
+
+Perform for birds that died
+
+``` r
+beak_length_died <-
+  finches %>%                     # start with finches dataset
+  filter(outcome == "died") %>%   # only include rows w/ outcome=died
+  pull(beak_length)               # extract the beak_length column
+```
+
+Print vector
+
+``` r
+beak_length_died
+```
+
+    ##  [1]  9.20  9.50  9.93 11.13 12.13 10.63  9.93 11.33  9.93 11.10 10.80
+    ## [12]  9.70 10.60  9.60 10.50  9.90  9.60 10.70  9.30 10.10  9.70 11.00
+    ## [23] 11.00 11.60 10.50 10.20  9.70 11.10 11.10 10.20 10.80 10.00 11.10
+    ## [34] 10.30 11.10 10.50 11.00 10.00 10.30 11.70 10.20 10.90 11.90 10.20
+    ## [45] 10.50 10.50  9.80 11.80 11.00 10.30
+
+Perform for birds that died
+
+``` r
+beak_length_survived <-
+  finches %>% 
+  filter(outcome == "survived") %>% 
+  pull(beak_length)
+```
+
+Print vector
+
+``` r
+beak_length_survived
+```
+
+    ##  [1] 11.50 10.20 12.10 11.60 10.30 11.40  8.70  9.90 10.20 10.30 11.43
+    ## [12] 11.93 11.03 10.63 10.83 11.23 11.23 10.23 11.63 12.23 11.03 11.13
+    ## [23] 10.93 11.03 10.23 11.33 10.03 10.70 10.00 12.43 11.09  9.63 11.60
+    ## [34] 11.30 12.13 12.03 10.63 11.83 12.43 12.73 10.33 11.03 12.53 12.13
+    ## [45] 10.43 10.53 11.23 11.23 10.90 10.50
+
+Perform a two-tailed t-test on survived versus died
+
+``` r
+t.test(beak_length_died, beak_length_survived)
+```
+
+    ## 
+    ##  Welch Two Sample t-test
+    ## 
+    ## data:  beak_length_died and beak_length_survived
+    ## t = -3.6335, df = 94.807, p-value = 0.0004539
+    ## alternative hypothesis: true difference in means is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -0.8681443 -0.2546557
+    ## sample estimates:
+    ## mean of x mean of y 
+    ##   10.5122   11.0736
