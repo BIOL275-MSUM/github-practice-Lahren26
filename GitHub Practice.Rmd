@@ -1,0 +1,18 @@
+---
+title: "Analysing Finch Data"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Packages
+
+Loading the packages necessary for the sript to run
+
+```{r}
+library(readxl)     # load readxl, for reading Excel files
+library(tidyverse)  # load tidyverse, for working with datasets
+```
+
