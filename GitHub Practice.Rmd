@@ -52,3 +52,41 @@ ggplot(
   )
 ```
 
+## T-test
+
+Perform for birds that died
+
+```{r}
+beak_length_died <-
+  finches %>%                     # start with finches dataset
+  filter(outcome == "died") %>%   # only include rows w/ outcome=died
+  pull(beak_length)               # extract the beak_length column
+```
+
+Print vector
+
+```{r}
+beak_length_died
+```
+
+Perform for birds that died
+
+```{r}
+beak_length_survived <-
+  finches %>% 
+  filter(outcome == "survived") %>% 
+  pull(beak_length)
+```
+
+Print vector
+
+```{r}
+beak_length_survived
+```
+
+Perform a two-tailed t-test on survived versus died
+
+```{r}
+t.test(beak_length_died, beak_length_survived)
+```
+
