@@ -1,5 +1,5 @@
 ---
-title: "Analysing Finch Data"
+title: "Analyzing Finch Data"
 output: github_document
 ---
 
@@ -16,3 +16,13 @@ library(readxl)     # load readxl, for reading Excel files
 library(tidyverse)  # load tidyverse, for working with datasets
 ```
 
+## Read Finch Data
+
+```{r}
+finches <- read_excel("finches_data.xlsx")
+```
+
+## See all variables in the dataset
+```{r}
+glimpse(finches)
+```
