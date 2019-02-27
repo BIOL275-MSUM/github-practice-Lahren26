@@ -18,11 +18,37 @@ library(tidyverse)  # load tidyverse, for working with datasets
 
 ## Read Finch Data
 
+Reading the Finch Dataset
+
 ```{r}
 finches <- read_excel("finches_data.xlsx")
 ```
 
 ## See all variables in the dataset
+
+Glimpse the Finch Data Set
+
 ```{r}
 glimpse(finches)
 ```
+
+## Histogram
+
+Creating histogram for beaklength, grouped by survival with labels
+
+```{r}
+ggplot(
+  data = finches,                     # use the finches dataset
+  mapping = aes(x = beak_length,      # put beak length on the x axis
+                fill = outcome)       # fill sets the color of the boxes
+) +
+  geom_histogram(bins = 14) +         # add the histogram, use 14 bins
+  facet_wrap(~ outcome, ncol = 1) +   # outcome is the grouping variable
+  guides(fill = FALSE) +              # don't show a legend for fll color
+  labs(
+    title = "Figure 1.",              # title
+    x = "Beak Length (mm)",           # x-axis label
+    y = "Number of Birds"             # y-axis label
+  )
+```
+
