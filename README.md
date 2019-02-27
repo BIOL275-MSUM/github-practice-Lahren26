@@ -5,5 +5,6 @@ GitHub Project Set up
 Important files
 
 - Finches Dataset
-- [GitHub rmd](GitHub Practice.Rmd)
+- [Finches Data Analysis](GitHub_Practice.md)
+- 
 
