@@ -1,8 +1,8 @@
 ## GitHub Practice Assignment
 
-GitHub Project Set up
+GitHub Project Set up of repository
 
-Important files
+Important files included:
 
 - Finches Dataset
 - [Finches Data Analysis](GitHub_Practice.md)
@@ -12,4 +12,5 @@ Important files
 This github project walks through the analysis of finch data
 
 ## Link for now:
-Rmd file project file:///C:/Users/yv0010gn/AppData/Local/Temp/RtmpuIs9op/preview-11f84de1409d.html
+Rmd file project:
+file:///C:/Users/yv0010gn/AppData/Local/Temp/RtmpuIs9op/preview-11f84de1409d.html
